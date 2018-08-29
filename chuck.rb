@@ -13,7 +13,7 @@ class ChuckJokes
 
         puts "If you want a random joke: Example name.random"
         puts "If you want to select a joke by id (1-603). Example name.get_joke_by_id(69)"
-        puts "If you want to change the first name. Example name.replace_name(target name in quotes)"
+        puts "If you want to change the first name. Example name.replace_name(target firstname in quotes, target lastname in quotes)"
         puts "Do this on the command line. 💩 Because Chuck says so!"
     end
 
@@ -21,8 +21,8 @@ class ChuckJokes
         by_joke_by_id = HTTParty.get("http://api.icndb.com/jokes/#{id}")
         puts ColorizedString[by_joke_by_id["value"]["joke"]].colorize(:color => :yellow, :background => :green)
     end
-    def replace_name(name)
-        by_replace_name_data = HTTParty.get("http://api.icndb.com/jokes/random?firstName=#{name}")
+    def replace_name(name,lname)
+        by_replace_name_data = HTTParty.get("http://api.icndb.com/jokes/random?firstName=#{name}&lastName=#{lname}")
         puts by_replace_name_data["value"]["joke"].colorize(:light_blue)
     end
     def random
