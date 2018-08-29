@@ -7,7 +7,14 @@ class ChuckJokes
     #there are 603 total jokes 
     def help
         puts "Wants some help.....Look it up, like I did!  👊  🥋"
-        puts "💩 Because Chuck says so!"
+    
+        puts "Seriously do the following:"
+        puts "On the command line create a new instance of the app. Example name = ChuckJokes.new"
+
+        puts "If you want a random joke: Example name.random"
+        puts "If you want to select a joke by id (1-603). Example name.get_joke_by_id(69)"
+        puts "If you want to change the first name. Example name.replace_name(target name in quotes)"
+        puts "Do this on the command line. 💩 Because Chuck says so!"
     end
 
     def get_joke_by_id(id)
