@@ -1,7 +1,7 @@
 require 'httparty'
 require 'colorize'
 require 'colorized_string'
-require_relative './app'
+
 
 class ChuckJokes
     #there are 603 total jokes 
